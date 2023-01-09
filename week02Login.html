@@ -17,7 +17,7 @@
                     <h1 class="h3 mb-3 font-weight-normal">
                     請先登入
                     </h1>
-                    <div class="col-12">
+                    <div class="col-11">
                         <form id="form" class="form-signin" @submit.prevent="login">
                             <!-- 在form上加入v-on事件，就不一定要按下送出表單的按鈕，才能傳送資料，按下enter案件也可傳送表單 -->
                             <div class="form-floating mb-3">
@@ -43,7 +43,6 @@
                 </p>
             </div>
         </div>
-
     <script type="module">
         import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';//使用esm方式匯入vue
 
@@ -69,7 +68,7 @@
                             const { token, expired } = res.data;//物件解構
                             //登入成功時，寫入 cookie token
                             document.cookie = `etToken=${token}; expires=${new Date(expired)};`;// expires 設置有效時間
-                            axios.defaults.headers.common['Authorization'] = token; 
+                            //axios.defaults.headers.common['Authorization'] = token; 登入頁面不用
                             //window.location 用於獲得目前頁面的網址 (URL)並把瀏覽器重定向到新的页面。
                             //登入成功即到產品頁面
                             window.location = 'week02Product.html';
@@ -81,8 +80,6 @@
             },
         }).mount('#app');
         //渲染於指定的位置上面
-
-
 
 
     </script>
