@@ -30,7 +30,7 @@ createApp({
                         alert(err.data.message);
                         //console.dir(err);
                         //登入失敗即立刻回到登入頁面
-                        //window.location = 'login.html';
+                        window.location = 'login.html';
                     })
             },
             getProductData() {
