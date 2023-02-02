@@ -1,7 +1,7 @@
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';//使用esm方式匯入vue
 
-let myModal = '';
-let delModal ='';
+let myModal = {};//可被拿來放 DOM 元素
+let delModal = {};//可被拿來放 DOM 元素
 
 createApp({
         //資料
