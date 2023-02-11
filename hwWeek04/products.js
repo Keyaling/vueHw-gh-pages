@@ -43,7 +43,7 @@ const app = Vue.createApp({
                     //console.log(res);//確認是否有正確取得遠端資料
                     this.products = res.data.products;
                     this.page = res.data.pagination;//將page的資訊存起來
-                    console.log(res.data);
+                    //console.log(res.data);
                     //讓products這個原本是空陣列裝入從遠端取得res的資料裡的products
                 })
                 .catch((err) => {
